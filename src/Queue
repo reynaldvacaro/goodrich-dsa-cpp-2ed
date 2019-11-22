@@ -1,0 +1,26 @@
+/*
+ * Queue
+ *
+ *  Created on: 19 Nov 2019
+ *      Author: Collabera
+ */
+
+#ifndef SRC_QUEUE_
+#define SRC_QUEUE_
+
+#include "QueueEmpty.h"
+
+template<typename E>
+class Queue {
+public:
+	int size() const;
+	bool empty() const;
+	const E& front() const throw(QueueEmpty);
+	void enqueue(const E& e);
+	void dequeue() throw(QueueEmpty);
+};
+
+
+
+
+#endif /* SRC_QUEUE_ */
